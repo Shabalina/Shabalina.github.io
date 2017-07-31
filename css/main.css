@@ -146,6 +146,12 @@ ul {
 .header__logo {
   margin-right: auto; }
 
+.logo {
+  display: inline-block;
+  /* max-width: 92px;
+  max-height: 69px;
+  overflow: hidden;*/ }
+
 .nav {
   margin-right: 0.9375rem; }
 
@@ -184,6 +190,19 @@ ul {
   transition: .5s; }
   .nav__link:hover {
     text-decoration: underline; }
+
+.points {
+  list-style-type: none;
+  position: fixed;
+  right: 54px;
+  top: 95px; }
+
+.point__item {
+  width: 6px;
+  height: 6px;
+  background: white;
+  border-radius: 50%;
+  margin-bottom: 12px; }
 
 .hero__container {
   height: 100%;
@@ -238,7 +257,10 @@ ul {
   -webkit-box-align: center;
   -webkit-align-items: center;
   -ms-flex-align: center;
-  align-items: center; }
+  align-items: center;
+  /* max-width: 451px;
+  max-height: 420px;
+  overflow: hidden;*/ }
 
 .hero__description {
   -webkit-box-orient: vertical;
@@ -250,44 +272,6 @@ ul {
   -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center; }
-
-.points {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-align-self: flex-start;
-  -ms-flex-item-align: start;
-  align-self: flex-start;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
-  padding-top: 10px; }
-
-.point__item {
-  display: block;
-  margin: 10px;
-  content: ' ';
-  width: 6px;
-  height: 6px;
-  border-radius: 3px;
-  background-color: white;
-  border: 2px solid white; }
-
-.first {
-  margin-left: 6px;
-  content: ' ';
-  width: 17px;
-  height: 17px;
-  border-radius: 8.5px;
-  background-color: transparent;
-  border: 2px solid white; }
 
 .section__title {
   color: #f9b43b;
@@ -306,7 +290,10 @@ ul {
   line-height: 1; }
 
 .arrow-scroll {
-  margin-bottom: 10px; }
+  margin-bottom: 10px;
+  /*max-width: 29px;
+  max-height: 14px;
+  overflow: hidden;*/ }
 
 .best {
   background-image: url("../img/bg/best-bg.png");
@@ -400,6 +387,11 @@ ul {
   line-height: 24px;
   text-align: justify;
   text-align-last: center; }
+
+.best_img {
+  /* max-width: 97px;
+  max-height: 89px;
+  overflow: hidden;*/ }
 
 .burgers {
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0, #f9b43b), color-stop(40%, #eb8c38), color-stop(60%, #eb8c38), color-stop(0, #eb8c38), to(#f9b43b));
