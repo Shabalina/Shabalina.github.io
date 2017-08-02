@@ -1,0 +1,127 @@
+.team {
+  background-image: url('../img/bg/sbs-1255-x2.png');
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: cover;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.team-info {
+  position: absolute;
+  background-color: #2f3234;
+  opacity: 0.93;
+  background-size: cover;
+  width: 50%;
+  height: 100%;
+  min-height: 650px;
+  min-width: 540px;
+}
+
+.header__team {
+    justify-content: center;
+}
+
+.member_button {
+    background-color: transparent;
+    cursor: pointer;
+    padding: 10px 27%;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+    &:hover {
+      .member_info--active{
+      height: 100%;}
+    } 
+}
+
+.member_name{
+    width: 81px;
+    height: 15px;
+    color: #ffffff;
+    font-family: Gagalin;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 28px;
+}
+
+
+.member_info{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 0;
+    overflow: hidden;
+    
+}
+
+/*.member_info--active{
+  height: 100%;
+}*/
+
+.member_info__photo{
+  display: flex;
+  flex-basis: 45%;
+  justify-content: flex-end;
+  max-height: 100px;
+}
+
+
+
+
+
+.member_info__text{
+  display: flex;
+  flex-direction: column;
+  flex-basis: 55%;
+  justify-content: center;
+  max-height: 100px;
+} 
+
+.member_role{
+  width: 208px;
+  height: 92px;
+  color: #ffffff;
+  font-family: Ubuntu;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 700;
+  margin: 0px;
+}
+
+  .text{
+    font-weight: 300;
+  }
+  /* Text style for "С радостью" */
+  
+
+
+
+/*
+.member_info{
+    display: inline;
+    padding: 100px;
+
+}
+
+.member_info__photo{
+  width: 30%;
+}
+
+.member_info__text{
+  width: 70%;
+  text-align: left;
+}*/
+
+
+
+/*
+  display: block;
+  right: 560px;
+  top: 0px;
+  width: 540px;
+  height: 650px;
+  position: absolute;*/

@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: 'Ubuntu';
   src: url("../fonts/ubuntu/ubuntu-b-webfont.woff2") format("woff2");
@@ -489,5 +490,154 @@ ul {
   transition: .5s; }
   .review__view:hover {
     background-color: #232527; }
+
+.team {
+  background-image: url("../img/bg/sbs-1255-x2.png");
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: cover;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center; }
+
+.team-info {
+  position: absolute;
+  background-color: #2f3234;
+  opacity: 0.93;
+  background-size: cover;
+  width: 50%;
+  height: 100%;
+  min-height: 650px;
+  min-width: 540px; }
+
+.header__team {
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+
+.member_button {
+  background-color: transparent;
+  cursor: pointer;
+  padding: 10px 27%;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none; }
+  .member_button:hover .member_info--active {
+    height: 100%; }
+
+.member_name {
+  width: 81px;
+  height: 15px;
+  color: #ffffff;
+  font-family: Gagalin;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 28px; }
+
+.member_info {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  height: 0;
+  overflow: hidden; }
+
+/*.member_info--active{
+  height: 100%;
+}*/
+.member_info__photo {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-basis: 45%;
+  -ms-flex-preferred-size: 45%;
+  flex-basis: 45%;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+  -ms-flex-pack: end;
+  justify-content: flex-end;
+  max-height: 100px; }
+
+.member_info__text {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-basis: 55%;
+  -ms-flex-preferred-size: 55%;
+  flex-basis: 55%;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  max-height: 100px; }
+
+.member_role {
+  width: 208px;
+  height: 92px;
+  color: #ffffff;
+  font-family: Ubuntu;
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 700;
+  margin: 0px; }
+
+.text {
+  font-weight: 300; }
+
+/* Text style for "С радостью" */
+/*
+.member_info{
+    display: inline;
+    padding: 100px;
+
+}
+
+.member_info__photo{
+  width: 30%;
+}
+
+.member_info__text{
+  width: 70%;
+  text-align: left;
+}*/
+/*
+  display: block;
+  right: 560px;
+  top: 0px;
+  width: 540px;
+  height: 650px;
+  position: absolute;*/
 
 /*# sourceMappingURL=main.css.map */
