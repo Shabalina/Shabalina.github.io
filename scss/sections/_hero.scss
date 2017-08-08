@@ -11,7 +11,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 10px;
+  padding-top: rem(10px);
 }
 
 .header__logo {
@@ -20,9 +20,12 @@
 
 .logo{
   display: inline-block;
- /* max-width: 92px;
-  max-height: 69px;
-  overflow: hidden;*/
+}
+
+.header__menu{
+    @include tablets(){
+    display: none;
+  }
 }
 
 .nav {
@@ -43,7 +46,7 @@
     vertical-align: middle;
     content: ' ';
     @include circle(5px, #fff);
-    margin: 0 12px;
+    margin: 0 rem(12px);
   }
   &:last-child:after {
     display: none;
@@ -52,7 +55,7 @@
 
 .nav__link {
   color: #ffffff;
-  font-size: 13px;
+  font-size: rem(13px);
   font-weight: 500;
   line-height: 1.42;
   text-transform: uppercase;
@@ -65,84 +68,94 @@
   }
 }
 
-
-.points {
-  list-style-type: none;
-  position: fixed;
-  right: 54px;
-  top: 95px;
+.header__btn{
+  display: flex;
+  align-items: center;
+  margin-left: auto;
 }
 
-.point__item {
- width: 6px;
-  height: 6px;
-  background: white;
-  border-radius: 50%;
-  margin-bottom:  12px;
-}
+.hamburger-menu-link{
+  vertical-align: middle;
+  position: relative;
+  height: rem(22px);
+  align-items: center;
+  margin-left: rem(30px);
+  display: none;
 
+  @include tablets(){
+    display: flex;
+  }
+}
 
 .hero__container {
-  height: 100%;
   display: flex;
   flex-direction: column;
+  flex:1;
   justify-content: center;
-  align-items: center;
+  padding-bottom: 15%;
+  
 }
 
 .hero__content {
-  width: 100%;
   display: flex;
-  flex-wrap: nowrap;
-/* flex-wrap: wrap; */
-  flex-grow: 1;
+  flex-direction: row;
   align-items: center;
   padding-bottom: 15%;
+  @include tablets() {    
+    flex-direction: column;
+    align-items: center;
+    padding: 0 20%;
+  }
 }
 
-.hero__img, .hero__description {
+.hero__left, .hero__right {
   flex-basis: 50%;
+}
+
+
+
+.hero__right {
   display: flex;
-}
-
-.hero__img {
-  align-items: center;
- /* max-width: 451px;
-  max-height: 420px;
-  overflow: hidden;*/
-}
-
-.hero__description {
   flex-direction: column;
-  align-content: flex-end;
-  justify-content: center;
+  justify-content: flex-start;
+  padding-top: rem(50px);
+   @include tablets() {
+    padding-top: 0;
+  }
 }
-
 
 .section__title {
   color: #f9b43b;
   font-family: 'Gagalin';
-  font-size: 72px;
+  font-size: rem(72px);
   font-weight: 400;
   line-height: 1.42;
   margin: 0;
-  padding-top: 60px;
+  @include tablets() {
+    font-size: rem(52px);
+    text-align: center;
+}
 }
 
-.hero__description-text {
+.hero__right-text {
   color: #ffffff;
   font-family: 'Lifehack';
-  font-size: 65px;
+  font-size: rem(65px);
   font-weight: 500;
   line-height: 1;
-  margin-bottom: 0px;
-  margin-top: 10px;
+  margin-bottom: rem(0px);
+  margin-top: rem(10px);
+    @include tablets() {
+    margin-bottom: rem(10px);
+    margin-top: rem(0px);
+    font-size: rem(45px);
+    text-align: center;
+  }
 }
 
 .arrow-scroll {
-  margin-bottom: 10px;
-  /*max-width: 29px;
-  max-height: 14px;
-  overflow: hidden;*/
+  display: flex;
+  justify-content: center;
+  margin-bottom: rem(10px);
 }
 

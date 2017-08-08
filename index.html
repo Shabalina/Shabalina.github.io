@@ -16,9 +16,9 @@
     <div class="wrapper">
       <div class="maincontent">
         <section class="section hero">
-          <div class="container hero__container">
+          <div class="container">
             <header class="header">
-              <div class="header__logo"><a class="logo" href="#"><img class="logo__img" src="/img/logo.svg" alt="logo"></a></div>
+              <div class="header__logo"><a class="logo" href="#"><img class="logo__img" src="img/logo.svg" alt="logo"></a></div>
               <div class="header__menu">
                 <nav class="nav">
                   <ul class="nav__list">
@@ -37,49 +37,52 @@
                   </ul>
                 </nav>
               </div>
-              <div class="header__btn"><a class="order-link" href="" data-goto="6">Заказать</a></div>
+              <div class="header__btn">
+                <a class="order-link" href="" data-goto="6">
+                  Заказать
+                </a>
+              </div>
             </header>
-            
-            <div class="hero__content">
-              <div class="hero__img"><img src="/img/content/drops.png" alt="drops"></div>
-              <div class="hero__description">
-                <h2 class="section__title">Мы делаем</h2>
-                <p class="hero__description-text">натуральные бургеры</p>
-              </div>                   
+            <div class="container hero__container"> 
+              <div class="hero__content">
+                <div class="hero__left"><img src="img/content/drops.png" class="hero__img" alt="drops"></div>
+                <div class="hero__right">
+                  <div class="section__title">Мы делаем</div>
+                  <div class="hero__right-text">натуральные бургеры</div>
+                </div>                   
+              </div>
+            </div>
+            <div class= "arrow-scroll">
+              <a href="#"><img class="arrow-scroll" src="img/arrow-scroll.svg" alt="arrow"></a>
+              </div>
           </div>
-              <ul class="nav__list points">
-                <li class="point__item"><a href=""></a></li>
-                <li class="point__item"><a href=""></a></li>
-                <li class="point__item"><a href=""></a></li>
-                <li class="point__item"><a href=""></a></li>
-                <li class="point__item"><a href=""></a></li>
-                <li class="point__item"><a href=""></a></li>
-                <li class="point__item"><a href=""></a></li>
-              </ul>
-              <div class= "arrow-scroll">
-                <a href="#"><img class="arrow-scroll" src="/img/arrow-scroll.svg" alt="arrow"></a>
-                </div>
         </section>
         <section class="section best">
           <div class="container">
             <h2 class="section__title section__title--best">Мы лучшие</h2>
-            <div class="why_best">
-                <div class="reasons">
-                    <div class="best_img"><img src="img/meat.svg" alt=""></div>
-                    <h2 class="motto">100% свежее мясо</h2>
-                    <div class="details">Драма представляет собой деструктивный цикл. Анапест представляет собой анапест. Ямб неравномерен.</div>
-                </div>
-                <div class="reasons">
-                    <div class="best_img"><img src="img/hand.svg" alt=""></div>
-                    <h2 class="motto">Ручная сборка</h2>
-                    <div class="details">Драма представляет собой деструктивный цикл. Анапест представляет собой анапест. Первое полустишие притягивает сюжетный реформаторский пафос.</div>
-                </div>
-                <div class="reasons">
-                    <div class="best_img"><img src="img/natural.svg" alt=""></div>
-                    <h2 class="motto">Натуральные ингредиенты</h2>
-                    <div class="details">Драма представляет собой деструктивный цикл. Анапест представляет собой анапест.</div>
-                </div>
-            </div>              
+            <ul class="why_best">
+                <li class="reasons">
+                    <img src="img/meat.svg" class="best_img" alt="">
+                    <div class="best_description">
+                      <h2 class="motto">100% свежее мясо</h2>
+                      <div class="details">Драма представляет собой деструктивный цикл. Анапест представляет собой анапест. Ямб неравномерен.</div>
+                    </div> 
+                  </li>
+                <li class="reasons">
+                    <img src="img/hand.svg" class="best_img" alt="">
+                    <div class="best_description">
+                      <h2 class="motto">Ручная сборка</h2>
+                      <div class="details">Драма представляет собой деструктивный цикл. Анапест представляет собой анапест. Первое полустишие притягивает сюжетный реформаторский пафос.</div>
+                    </div>
+                  </li>
+                <li class="reasons">
+                    <img src="img/natural.svg" class="best_img" alt="">
+                    <div class="best_description">
+                      <h2 class="motto">Натуральные ингредиенты</h2>
+                      <div class="details">Драма представляет собой деструктивный цикл. Анапест представляет собой анапест.</div>
+                    </div>
+                  </li>
+            </ul>              
           </div>  
                      
         </section>
@@ -87,18 +90,27 @@
           <div class="container"></div>
         </section> -->
         <section class="section team">
-           <div class=team-info>
+           <div class=team_section>
+             <div class="team_content">
              <header class="header header__team">
               <h2 class="section__title">Команда</h2>
              </header>
-            <nav>
               <ul class="team_list">
                 <li class="team_member">
-                  <button class="member_button">
-                    <span class="member_icon"></span>
-                    <span class="member_name">Дениэл Редклиф</span>
-                  </button>
-                  <div class="member_info member_info--active">
+                  <div class="member_name">Дениэл Редклиф</div>
+                  <div class="member_info">
+                    <span class="member_info__photo">
+                      <img src="img/content/team/aphex.png" alt="photo">
+                    </span>
+                    <div class="member_info__text">
+                      <h2 class="member_role">Оператор</h2>
+                      <p class="member_role text">С радостью поможет подобрать идеальный бургер и оформить заказ.</p>
+                    </div>
+                  </div>
+                </li>
+                <li class="team_member active">
+                  <div class="member_name">Ричард Джеймс</div>
+                  <div class="member_info">
                     <span class="member_info__photo">
                       <img src="img/content/team/aphex.png" alt="photo">
                     </span>
@@ -109,20 +121,173 @@
                   </div>
                 </li>
                 <li class="team_member">
-                  <button class="member_button">
-                    <span class="member_icon"></span>
-                    <span class="member_name">Ричард Джеймс</span>
-                  </button>
-                  <div class="panel">
-                    <p>Lorem ipsum...</p>
+                  <div class="member_name">Джейк Финн</div>
+                  <div class="member_info">
+                    <span class="member_info__photo">
+                      <img src="img/content/team/aphex.png" alt="photo">
+                    </span>
+                    <div class="member_info__text">
+                      <h2 class="member_role">Оператор</h2>
+                      <p class="member_role text">С радостью поможет подобрать идеальный бургер и оформить заказ.</p>
+                    </div>
+                  </div>
+                </li>
+                <li class="team_member">
+                  <div class="member_name">Николай Иванов</div>
+                  <div class="member_info">
+                    <span class="member_info__photo">
+                      <img src="img/content/team/aphex.png" alt="photo">
+                    </span>
+                    <div class="member_info__text">
+                      <h2 class="member_role">Оператор</h2>
+                      <p class="member_role text">С радостью поможет подобрать идеальный бургер и оформить заказ.</p>
+                    </div>
                   </div>
                 </li>
               </ul>
-            </nav>
-            
-             </div> 
-          
+             </div>
+            </div> 
         </section>
+        <section class="section menu">
+             <header class="header menu__header">
+              <h2 class="section__title">Меню</h2>
+             </header>
+              <ul class="menu-accord">
+                <li class="menu_item active">  
+                  <a a class="menu-acco__item" href="#" style="background-image: url('img/bg/menu_nonveg.png')">                  
+                    <div class="menu-acco__item_name">
+                      Для Мясоедов
+                    </div>
+                  </a>
+                    <div class="menu-acco__info">
+                      <div class="menu-acco__text">
+                        Attended no do thoughts me on dissuade scarcely. Own are pretty spring suffer old denote his. By proposal speedily mr striking am. But attention sex questions applauded how happiness. To travelling occasional at oh sympathize prosperous. His merit end means widow songs linen known. Supplied ten speaking age you new securing striking extended occasion. Sang put paid away joy into six her.
+                      </div>
+                    </div>               
+                </li>
+                <li class="menu_item menu_active">  
+                  <a a class="menu-acco__item" href="#" style="background-image: url('img/bg/menu_veg.png')">                  
+                    <div class="menu-acco__item_name">
+                      Вегетарианское
+                    </div>
+                  </a>
+                    <div class="menu-acco__info">
+                      <div class="menu-acco__text">
+                        Attended no do thoughts me on dissuade scarcely. Own are pretty spring suffer old denote his. By proposal speedily mr striking am. But attention sex questions applauded how happiness. To travelling occasional at oh sympathize prosperous. His merit end means widow songs linen known. Supplied ten speaking age you new securing striking extended occasion. Sang put paid away joy into six her.
+                      </div>
+                    </div>               
+                </li>
+                <li class="menu_item menu_active">  
+                  <a a class="menu-acco__item" href="#" style="background-image: url('img/bg/menu_diet.png')">                  
+                    <div class="menu-acco__item_name">
+                      Диетическое
+                    </div>
+                  </a>
+                    <div class="menu-acco__info">
+                      <div class="menu-acco__text">
+                        Attended no do thoughts me on dissuade scarcely. Own are pretty spring suffer old denote his. By proposal speedily mr striking am. But attention sex questions applauded how happiness. To travelling occasional at oh sympathize prosperous. His merit end means widow songs linen known. Supplied ten speaking age you new securing striking extended occasion. Sang put paid away joy into six her.
+                      </div>
+                    </div>               
+                </li>
+              </ul>
+        </section>
+        <section class="section order">
+          <div class="container">
+            <div class="section__title">
+              Закажите доставку
+            </div>
+          <form class="order_form_tag" id="order-form">
+            <div class="order__form">
+              <div action="" class="order__form_col">
+                  <div class="form__row">
+                    <label class="order__form-block">
+                      <div class="order__form-block-label">
+                        Имя
+                      </div>
+                      <input class="order__form-input" name="name" type="text" placeholder="" size="1px">
+                    </label>
+                  <label class="order__form-block">
+                      <div class="order__form-block-label">
+                        Телефон
+                      </div>
+                      <input class="order__form-input" name="phone" type="text" placeholder="" size="1px">
+                    </label>
+                  </div>
+                  <div class="form__row">
+                    <label class="order__form-block">
+                      <div class="order__form-block-label">
+                        Улица
+                      </div>
+                      <input class="order__form-input" name="street" type="text" placeholder="" size="1px">
+                    </label>
+                  </div>
+                  <div class="form__row">
+                    <label class="order__form-block">
+                      <div class="order__form-block-label">
+                        Дом
+                      </div>
+                      <input class="order__form-input" name="house" type="text" placeholder="" size="1px">
+                    </label>
+                    <label class="order__form-block">
+                      <div class="order__form-block-label">
+                        Строение
+                      </div>
+                      <input class="order__form-input" name="block" type="text" placeholder="" size="1px">
+                    </label>
+                    <label class="order__form-block">
+                      <div class="order__form-block-label">
+                        Квартира
+                      </div>
+                      <input class="order__form-input" name="flat" type="text" placeholder="" size="1px">
+                    </label>
+                    <label class="order__form-block">
+                      <div class="order__form-block-label">
+                        Этаж
+                      </div>
+                      <input class="order__form-input" name="level" type="text" placeholder="" size="1px">
+                    </label>
+                  </div>
+              </div>
+              <div action="" class="order__form_col">
+                  <div class="form__row">
+                    <label class="order__form-block">
+                      <div class="order__form-block-label">
+                        Коментарии
+                      </div>
+                      <textarea class="order__form-input order__form-textarea" name="comment">
+                        </textarea>
+                    </label>
+                  </div>
+                   <div class="order__form-buttons">
+                     <div class="form__row">
+                      <label class="order__radio">
+                        <input class="order__radio-elem" name="payment" type="radio">
+                        <div class="order__radio-fake"></div>
+                        <div class="order__radio-title">Потребуется сдача</div>
+                      </label>
+                    <label class="order__radio">
+                      <input class="order__radio-elem" name="payment" type="radio">
+                      <div class="order__radio-fake"></div>
+                      <div class="order__radio-title">Оплата по карте</div>
+                    </label>
+                  </div>
+                  <div class="form__row">
+                  <label class="order__radio order__radio_checkbox">
+                      <input class="order__radio-elem" name="callback" type="checkbox">
+                      <div class="order__radio-fake"></div>
+                      <div class="order__radio-title">Не перезванивать</div>
+                    </label>
+                  </div>
+                  <div class="form__row">
+                  <input class="order__form-button" name="" type="submit" value="Заказать">
+                  <input class="order__form-button order__form-button_reset" name="" type="reset" value="Очистить">
+                </div>  
+               </div>
+              </div>
+            </div>
+          </form>
+        </div>
+      </section>
         <section class="section rewiews">
           <ul class="reviews__list">
             <li class="reviews__item">
@@ -207,7 +372,51 @@
             </li>
           </ul>
         </section>
-      </div>
+      
+      <section class="section contacts">
+        <footer class="footer">
+          <div class="footer__container">
+          <div class="adress_area">
+            <p class="contacts_text">
+              Санкт-Петербург, ул.Бабушкина, д.12/1, 15
+            </p>
+            <a class="contacts_text tel" href="tel:+78123771377">+7 (812) 377-13-77</a>
+          </div>
+          <ul class="icons_area">
+            <li class="icon">
+              <a class="icon__link" href="#">
+               <img src="img/content/contacts/vk.png" alt="">
+              </a>
+            </li>
+            <li class="icon">
+              <a class="icon__link" href="#">
+                <img src="img/content/contacts/fb-hover.png" alt="">
+              </a>
+            </li>
+            <li class="icon">
+              <a class="icon__link" href="#">
+               <img src="img/content/contacts/inst.png" alt="">
+              </a>
+            </li>
+            <li class="icon">
+              <a class="icon__link" href="#">
+                <img src="img/content/contacts/twitter.png" alt="">
+              </a>
+              </li>
+          </ul>   
+          </div>        
+        </footer>
+      </section> 
+      <ul class="nav__list points">
+        <li class="point__item"><a href=""></a></li>
+        <li class="point__item"><a href=""></a></li>
+        <li class="point__item"><a href=""></a></li>
+        <li class="point__item"><a href=""></a></li>
+        <li class="point__item"><a href=""></a></li>
+        <li class="point__item"><a href=""></a></li>
+        <li class="point__item"><a href=""></a></li>
+      </ul> 
+    </div>
     </div>
   </body>
 </html>

@@ -1,3 +1,8 @@
+
+
+
+@import "config/_media";
+
 // Config
 @import "config/_variables";
 @import "config/_mixins";
@@ -12,3 +17,7 @@
 @import "sections/_burgers";
 @import "sections/_reviews";
 @import "sections/_team";
+
+@import "sections/_menu";
+@import "sections/_order";
+@import "sections/_contacts";

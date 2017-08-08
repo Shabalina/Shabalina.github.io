@@ -10,6 +10,9 @@
 
 .reviews__item {
   flex-basis: 25%;
+  @include tablets() {
+    flex-basis: 50%;
+  }
 }
 
 .review {
@@ -39,34 +42,55 @@
   transform: translate(-50%, -50%) scale(.7);
   opacity: 0;
   transition: .5s;
-  padding: 50px 30px 0px 20px;
+  padding: rem(50px) rem(30px) rem(0px) rem(20px);
   background-color: rgba(0, 1, 5, .7);
+  @include tablets() {
+    font-size: rem(14px);
+    padding: 0 12%;
+    text-align: center;
+  }
+   @include phones{
+    padding: 25%;
+  }
+  
 }
 
 .review__title {
   font-family: 'Gagalin';
   font-size: rem(14px);
-  margin-bottom: 15px;
+  margin-bottom: rem(15px);
   color: #fff;
+  @include tablets {
+    margin-bottom: rem(10px);
+  }
 }
 
 .review__shorttext {
   color: #ffffff;
   font-family: 'Ubuntu';
-  font-size: 14px;
+  font-size: rem(14px);
   font-weight: 300;
   line-height: rem(24px);
-  margin-bottom: 20px;
+  margin-bottom: rem(20px);
+   @include tablets {
+  //  font-size: rem(10px);
+    margin-bottom: rem(10px);
+    line-height: rem(18px);
+
+  }
+  @include phones{
+    display: none;
+  }
 }
 
 .review__view {
   display: inline-block;
-  width: 110px;
-  border-radius: 5px;
+  width: rem(110px);
+  border-radius: rem(5px);
   background-color: $dark;
-  padding: 10px 15px;
+  padding: rem(10px) rem(15px);
   color: #ffffff;
-  font-size: 13px;
+  font-size: rem(13px);
   font-weight: 500;
   text-transform: uppercase;
   text-decoration: none;

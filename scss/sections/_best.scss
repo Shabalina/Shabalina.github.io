@@ -10,8 +10,11 @@
 
 .section__title--best {
   color: #2f3234;
-  padding-top:20px;
+  padding-top:rem(20px);
   margin-bottom: rem(70px);
+  @include phones{
+  margin-bottom: rem(30px);
+  }
 }
 
 .container{
@@ -19,50 +22,66 @@
 }
 
 .why_best {
-  width: 100%;
+ // width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: row;
+  @include phones{
+    flex-direction: column;
+  }
 }
 
 
 .reasons {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   flex-direction: column;
   flex-basis: 33%;
+  height:100%;
+  padding: 5%;
+   @include phones{
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+.best_description{
+  @include phones{
+  margin-left: 10%;
+  }
 }
 
 .motto{
-  width: 164px;
-  height: 27px;
   color: #2f3234;
   font-family: Lifehack;
-  font-size: 24px;
+  font-size: rem(24px);
   font-weight: 500;
-  line-height: 28px;
+  line-height: rem(28px);
   text-align: center;
+  padding-top: rem(10px);
   margin-bottom: rem(40px);
+  @include phones{
+    margin-bottom: rem(10px);
+    text-align: left;
+  }
 }
 
 .details{
-  width: 281px;
-  height: 38px;
   opacity: 0.8;
   color: #2f3234;
   font-family: Ubuntu;
-  font-size: 14px;
+  font-size: rem(14px);
   font-weight: 300;
-  line-height: 24px;
+  line-height: rem(24px);  
   text-align: justify;
   text-align-last: center;
-}
-
-.best_img {
- /* max-width: 97px;
-  max-height: 89px;
-  overflow: hidden;*/
+  padding-top: rem(10px);
+  @include phones{
+    margin-bottom: rem(10px);
+    text-align: left;
+    text-align-last: left;
+  }
 }
 

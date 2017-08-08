@@ -1,39 +1,60 @@
+html{
+@include tablets{
+  font-size: rem(15px);
+}
+@include phones{
+  font-size: rem(13px);
+}
+}
+
+
 .wrapper {
   width: 100%; 
-  height: 100%;
+//  height: 100%;
+//  min-width: rem(940px) + rem(20px);
+  min-height: 100%;
+ // overflow: hidden;
   position: relative;
   min-height: 0;
 }
 
 .maincontent {
   height: 100%;
-  min-height: 650px;
+  min-height: rem(650px);
 }
 
+
 .container {
-  width: 940px;
+  max-width: rem(940px);
   margin: 0 auto;
+  width: 95%;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
 
+
+
 .section {
-  height: 100%;
+ // height: 100%;
   background-color: rgba(0,0,0,0.31);
-  min-width: 940px;
-  min-height: 650px;
+//  min-width: rem(940px);
+  min-height: rem(650px);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .order-link {
   min-width: rem(98px);
-  padding: 10px 17px;
-  border-radius: 5px;
+  padding: rem(10px) rem(17px);
+  border-radius: rem(5px);
   background-color: $orange;
   color: #fff;
   text-decoration: none;
-  font-size: 13px;
+  font-size: rem(13px);
   font-weight: 500;
   line-height: 1.42;
   text-transform: uppercase;
@@ -41,4 +62,27 @@
   &:hover {
     background-color: darken($orange, 7%);
   }
+}
+
+footer {
+  position: relative;
+  width: 100%;
+}
+
+.points {
+  list-style-type: none;
+  position: fixed;
+  right: rem(54px);
+  top: rem(95px);
+  @include tablets() {
+    display: none;
+  }
+}
+
+.point__item {
+ width: 6px;
+  height: 6px;
+  background: white;
+  border-radius: 50%;
+  margin-bottom:  rem(12px);
 }

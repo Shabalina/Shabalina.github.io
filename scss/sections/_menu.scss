@@ -1,0 +1,103 @@
+.menu {
+  background-image: url('../img/bg/bg_menu.png');
+  background-repeat: no-repeat;
+  background-position: 50%;
+  background-size: cover;
+  display: flex;
+  position: relative
+}
+
+.menu__header {
+    position: absolute;
+    top: 10%;
+	left: 10%;
+}
+
+.menu-accord {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;  
+  display: flex;
+//  flex-direction: column;
+//  justify-content: flex-end;
+//  height: 100%;
+ // align-items: center;
+//  transform: rotate(270deg) 
+  
+}
+
+.menu_item{
+    height: 100%;
+//    display: flex;
+//  flex-direction: column;
+//  justify-content: flex-end;
+    &.active {
+		.menu-acco__text {
+			color: $yellow;
+		}
+	}
+}
+  
+.menu-acco__item{
+    width: rem(80px);
+	display: block;
+	height: 100%;
+    float: left;
+    @include cover;
+	text-decoration: none;
+    position: relative;
+}
+
+.menu-acco__item_name{    
+    color: #ffffff;
+    font-family: Gagalin;
+    font-size: rem(40px);
+    font-weight: 400;
+    line-height: rem(64px);
+    white-space: nowrap;
+    position: absolute;
+    transform: rotate(-90deg) translateY(-50%);
+    transform-origin: 0 0;
+    left: 50%;
+    top: 100%;
+   margin-top: rem(-50px);
+
+}
+
+
+.menu-acco__info{
+    height: 100%;
+    background: rgba($dark, .93);
+//    float: left;
+    width: 0;
+    overflow: hidden;  
+}
+
+.active{
+  .menu-acco__info{
+ //   width: auto;
+  }
+}
+
+.menu-acco__text{
+    flex-basis: 60%;
+    color: #ffffff;
+    font-family: Ubuntu;
+    font-size: rem(14px);
+    padding: rem(60px) rem(30px);
+	width: 100%;  
+    line-height: rem(24px);
+//    display: none;
+}
+
+
+
+
+
+
+
+
+
+
+

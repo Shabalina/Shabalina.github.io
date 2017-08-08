@@ -7,70 +7,114 @@
   flex-direction: row;
   justify-content: flex-end;
   align-items: center;
+  position: relative;
 }
 
-.team-info {
+.team_section {
   position: absolute;
   background-color: #2f3234;
   opacity: 0.93;
   background-size: cover;
   width: 50%;
+  top: rem(0px);
+  right: rem(0px);
+  bottom: rem(0px);  
+//  padding: 5% 2% 0% 7%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+   @include tablets() { 
+     width: 100%;
+  }
+}
+
+.team_content{
+  display: flex;
+  flex-direction: column;
   height: 100%;
-  min-height: 650px;
-  min-width: 540px;
+  width: 60%;
+  justify-content: center;
+  @include tablets() {
+    align-items: center; 
+     text-align: center;
+  }
 }
 
-.header__team {
-    justify-content: center;
+.header__team, .team_list {
+    justify-content: space-around;
+    padding-bottom: 10%;
 }
 
-.member_button {
-    background-color: transparent;
-    cursor: pointer;
-    padding: 10px 27%;
-    width: 100%;
-    text-align: left;
-    border: none;
-    outline: none;
-    &:hover {
-      .member_info--active{
-      height: 100%;}
-    } 
+.team_list {
+  @include phones() {
+     text-align: left;
+     padding-left: rem(20px);
+  }
 }
-
-.member_name{
-    width: 81px;
-    height: 15px;
-    color: #ffffff;
-    font-family: Gagalin;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 28px;
-}
-
 
 .member_info{
     display: flex;
     flex-direction: row;
-    justify-content: center;
     height: 0;
-    overflow: hidden;
-    
+    overflow: hidden;  
 }
 
-/*.member_info--active{
-  height: 100%;
-}*/
+.member_name{
+    color: #ffffff;
+    font-family: Gagalin;
+    font-size: rem(14px);
+    font-weight: 400;
+    line-height: rem(28px);    
+    margin-bottom: rem(10px);
+    margin-top: rem(20px);
+    display: block;
+    position: relative;
+    padding-left: 5%;
+    align-items: center;
+    flex-wrap: nowrap;
+
+    @include tablets() {
+    display: inline-block; 
+    font-size: rem(25px);
+  }
+
+    &:before {
+      content: "";
+      width: rem(0px);
+      height: rem(0px);
+      border: rem(9px) solid transparent;
+      border-top-color: $yellow;
+      border-bottom: none;
+      display: block;
+      position: absolute;
+      left: rem(-16px);
+      top: rem(8px);
+      margin-right: 25%;
+  }
+}
+.active {
+  .member_info{
+    height: auto;
+  }
+
+  .member_name{
+    color: $yellow;
+
+    &:before{
+      transform: rotate(180deg)
+    }
+  }
+}
+
+
+
 
 .member_info__photo{
   display: flex;
-  flex-basis: 45%;
+  flex-basis: 25%;
   justify-content: flex-end;
-  max-height: 100px;
+  max-height: rem(100px);
 }
-
-
-
 
 
 .member_info__text{
@@ -78,50 +122,23 @@
   flex-direction: column;
   flex-basis: 55%;
   justify-content: center;
-  max-height: 100px;
+  max-height: rem(100px);
+  @include phones{
+    text-align: left;
+  }
 } 
 
 .member_role{
-  width: 208px;
-  height: 92px;
+  width: rem(208px);
+  height: rem(92px);
   color: #ffffff;
   font-family: Ubuntu;
-  font-size: 14px;
-  line-height: 24px;
+  font-size: rem(14px);
+  line-height: rem(24px);
   font-weight: 700;
-  margin: 0px;
+  margin: rem(0px);
 }
 
   .text{
     font-weight: 300;
   }
-  /* Text style for "С радостью" */
-  
-
-
-
-/*
-.member_info{
-    display: inline;
-    padding: 100px;
-
-}
-
-.member_info__photo{
-  width: 30%;
-}
-
-.member_info__text{
-  width: 70%;
-  text-align: left;
-}*/
-
-
-
-/*
-  display: block;
-  right: 560px;
-  top: 0px;
-  width: 540px;
-  height: 650px;
-  position: absolute;*/

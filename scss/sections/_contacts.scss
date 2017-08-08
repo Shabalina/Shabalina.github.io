@@ -1,0 +1,84 @@
+.contacts {
+  background-image: url('../img/bg/map.png');
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: cover;
+  position: relative
+}
+
+.footer {
+   background-image: url('../img/bg/footer.png');
+   background-repeat: no-repeat;
+  background-position: center bottom;
+   position: absolute;
+   right: 0;
+   left: 0;
+   bottom: 0;
+   padding: rem(10px) 0;
+}
+
+.footer__container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    @include phones {
+      flex-direction: column;
+  }
+}
+
+.adress_area{
+    display: flex;
+    flex-basis: 50%;
+    flex-direction: column;
+    margin-bottom: rem(13px);
+ //   justify-content: flex-start;
+    @include phones {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.icons_area{
+    text-align: right;
+    display: flex;
+    flex-basis: 50%;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+      @include phones {
+    justify-content: center;
+  }
+}
+
+.contacts_text{
+    
+    font-family: Ubuntu;
+    font-size: rem(14px);
+    line-height: rem(24px);
+    color: #ffffff;
+    font-weight: 300;
+    margin-top: rem(10px);
+    margin-left: rem(40px);
+
+    &.tel{
+        color: #e45028;
+        font-weight: 700;
+        margin-top: rem(6px);
+        &:before {
+        font-family: FontAwesome;
+        content: "\f095 ";
+        }
+    }
+     @include phones {
+    margin-left: 0;
+  }
+}
+
+
+.icon{
+    margin-right: rem(10px);
+     &:last-child {
+    margin-right: rem(40px);
+     }
+}
+
