@@ -1,0 +1,100 @@
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <meta http-equiv="X-UA-Compatible" content="ie=edge">
+            <title>Document</title>
+        </head>
+        <body>
+
+            <p>см консоль</p>
+            
+
+            <script>
+            //exercise1
+            console.log("exercise");
+            //var userStr = document.querySelector('.userString').value.split("");
+            var letterArr = "найти все гласные буквы".toLowerCase().split("");
+            //alert(letterArr);
+            console.log(letterArr);
+            var wovelsArr = ['а', 'у', 'о', 'ы', 'и', 'э', 'я', 'ю', 'ё', 'е'];
+            var resultArr =[];
+            for (i=0; i<letterArr.length; i+=1){
+                for (j=0; j<wovelsArr.length; j+=1){
+                    if (letterArr[i] === wovelsArr[j]){
+                        resultArr.push(letterArr[i]);
+                 //       console.log("match!");
+                        break;
+                        }
+                 }
+            }
+            console.log(resultArr);
+
+            //exercise2
+            console.log("exercise2");
+            var usersObj = [
+                {   name: "Алексей",
+                    salary: 500 },
+                {   name: "Виктор",
+                    salary: 1300 },
+                {   name: "Иван",
+                    salary: 1500 }
+                ];
+
+            function userSelector(userArr) {
+                selectedUsers = [];
+                for(i=0;i<userArr.length; i+=1){
+                   if (userArr[i].salary>1000){
+                       selectedUsers.push(userArr[i].name)
+                    }
+                }
+                return selectedUsers;
+            }
+
+            console.log(userSelector(usersObj));
+
+            //exercise3
+            console.log("exercise3");
+
+            pathString1 = "C:\Users\shabalinastya\Desktop\Shabalina.github.io.\index.html";
+            pathString2 = "C:\Users\shabalinastya\Pictures\France\Paris2016\select\IMG_3208.JPG";
+
+            function isHTML (filePath) {
+                fileExten = filePath.slice(-4).toLowerCase();
+             //   console.log(fileExten);
+                if (fileExten==="html"){
+                    return true
+                }
+                return false
+            }
+
+            console.log(pathString1);
+            console.log(isHTML(pathString1));
+            console.log(pathString2);
+            console.log(isHTML(pathString2));
+            
+
+            //exercise4
+            console.log("exercise4");
+
+            var randomNumber = [3, 13, 74, 14, 66, 15, 22, 4];
+
+            function selectEven (numList) {
+                var evenList = [];
+                for (i=0;i<numList.length; i+=1) {
+             //   console.log(fileExten);
+                    if (numList[i]%2 === 0){
+                        evenList.push(numList[i]);
+                    }
+                }
+                return evenList
+            }
+
+
+            console.log(randomNumber);
+            console.log(selectEven(randomNumber));
+
+            </script>    
+        </body>
+        </html>
