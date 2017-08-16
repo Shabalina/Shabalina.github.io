@@ -118,6 +118,7 @@
 .order__radio-elem:checked {
   &+.order__radio-fake {
     &:after {
+      content: "";
       width: rem(8px);
       height: rem(8px);
     }

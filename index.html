@@ -37,10 +37,14 @@
                   </ul>
                 </nav>
               </div>
-              <div class="header__btn">
-                <a class="order-link" href="" data-goto="6">
+              <div class="header__links">
+                <a class="order-link btn" href="" data-goto="6">
                   Заказать
                 </a>
+                <a class="hamburger-menu-link" href="">
+                  <div class="hamburger-menu-link__bars"></div>
+                </a>
+                
               </div>
             </header>
             <div class="container hero__container"> 
@@ -86,9 +90,43 @@
           </div>  
                      
         </section>
-<!---        <section class="section burgers"> 
-          <div class="container"></div>
-        </section> -->
+        <section class="section burgers"> 
+          
+            <div class="container burgers_container">
+            <div class= "arrow-scroll-burger">
+                <a href="#"><img class="arrow-scroll-left" src="img/content/arrow-scroll-left.png" alt="arrow"></a>
+                </div>
+            <div class="burgers_content">
+              <div class="burgers_left">
+              <img src="img/content/slider_burger.png" alt=""> 
+              </div>
+              <div class="burgers_right">
+                <div class="section__title section__title-burger">Dark Beef Burger</div>
+                <div class="burger__desc">
+                  Ваш старый добрый знакомый, с рубленым бифштексом из 100% говядины, тремя кусочками нежнейшего сыра эмменталь, двумя помидорами, луком, салатом и соусом гриль теперь с добавлением экзотического соуса чураско.
+                </div>
+                <div class="burgers_right-bottom">
+                  <div class="burger_price">
+                    <div class="burger_price number">500</div>
+                    <div class="burger_price currency">рублей</div>
+                  </div>
+                  <div class="burger_order">
+                    <a class="order-link btn" href="" data-scroll-to="6">Заказать</a>
+                    </div>
+                </div>
+              </div>
+            </div>
+            <div class= "arrow-scroll-burger">
+               <a href="#"><img class="arrow-scroll-right" src="img/content/arrow-scroll-right.png" alt="arrow"></a>
+                </div>
+           </div>  
+          <div class="ingridient_icon">
+            <img src="img/content/btn.png" alt="">
+          </div>
+          <div class="kkal_icon">
+            <img src="img/content/kkal.png" alt="">
+          </div>
+        </section>
         <section class="section team">
            <div class=team_section>
              <div class="team_content">
@@ -149,9 +187,7 @@
             </div> 
         </section>
         <section class="section menu">
-             <header class="header menu__header">
-              <h2 class="section__title">Меню</h2>
-             </header>
+              <h2 class="section__title menu__title">Меню</h2>
               <ul class="menu-accord">
                 <li class="menu_item active">  
                   <a a class="menu-acco__item" href="#" style="background-image: url('img/bg/menu_nonveg.png')">                  
@@ -204,13 +240,13 @@
                       <div class="order__form-block-label">
                         Имя
                       </div>
-                      <input class="order__form-input" name="name" type="text" placeholder="" size="1px">
+                      <input class="order__form-input" name="name" type="text" placeholder="">
                     </label>
                   <label class="order__form-block">
                       <div class="order__form-block-label">
                         Телефон
                       </div>
-                      <input class="order__form-input" name="phone" type="text" placeholder="" size="1px">
+                      <input class="order__form-input" name="phone" type="text" placeholder="">
                     </label>
                   </div>
                   <div class="form__row">
@@ -218,7 +254,7 @@
                       <div class="order__form-block-label">
                         Улица
                       </div>
-                      <input class="order__form-input" name="street" type="text" placeholder="" size="1px">
+                      <input class="order__form-input" name="street" type="text" placeholder="">
                     </label>
                   </div>
                   <div class="form__row">
@@ -226,25 +262,25 @@
                       <div class="order__form-block-label">
                         Дом
                       </div>
-                      <input class="order__form-input" name="house" type="text" placeholder="" size="1px">
+                      <input class="order__form-input" name="house" type="text" placeholder="">
                     </label>
                     <label class="order__form-block">
                       <div class="order__form-block-label">
                         Строение
                       </div>
-                      <input class="order__form-input" name="block" type="text" placeholder="" size="1px">
+                      <input class="order__form-input" name="block" type="text" placeholder="">
                     </label>
                     <label class="order__form-block">
                       <div class="order__form-block-label">
                         Квартира
                       </div>
-                      <input class="order__form-input" name="flat" type="text" placeholder="" size="1px">
+                      <input class="order__form-input" name="flat" type="text" placeholder="">
                     </label>
                     <label class="order__form-block">
                       <div class="order__form-block-label">
                         Этаж
                       </div>
-                      <input class="order__form-input" name="level" type="text" placeholder="" size="1px">
+                      <input class="order__form-input" name="level" type="text" placeholder="">
                     </label>
                   </div>
               </div>
@@ -407,6 +443,50 @@
           </div>        
         </footer>
       </section> 
+      <div class="hamburger-menu">
+                  <div class="hamburger-menu__logo">
+                    <a class="logo" href="#">
+                      <img class="logo__img" src="img/logo.svg" alt="logo">
+                    </a>
+                  </div>
+                  <div class="hamburger-menu__close">
+                    <a href="#">
+                      <img class="hamburger-menu__close-icon" src="img/content/close_icon.png" alt="">
+                      </a>
+                  </div>
+                  <ul class="nav__list-hamburger">
+                    <li class="nav__item-hamburger">
+                      <a class="nav__link nav__link-hamburger" href="" data-goto="1">
+                        Почему мы
+                      </a>
+                    </li>
+                    <li class="nav__item-hamburger">
+                      <a class="nav__link nav__link-hamburger" href="" data-goto="2">
+                        Меню
+                      </a>
+                    </li>
+                    <li class="nav__item-hamburger">
+                      <a class="nav__link nav__link-hamburger" href="" data-goto="3">
+                        Советы
+                      </a>
+                    </li>
+                    <li class="nav__item-hamburger">
+                      <a class="nav__link nav__link-hamburger" href="" data-goto="4">
+                      Кто мы
+                      </a>
+                  </li>
+                    <li class="nav__item-hamburger">
+                      <a class="nav__link nav__link-hamburger" href="" data-goto="5">
+                      Свяжитесь с нами
+                        </a>
+                    </li>
+                    <li class="nav__item-hamburger">
+                      <a class="nav__link nav__link-hamburger" href="" data-goto="6">
+                        Контакты
+                      </a>
+                    </li>
+                  </ul>
+                </div>
       <ul class="nav__list points">
         <li class="point__item"><a href=""></a></li>
         <li class="point__item"><a href=""></a></li>
@@ -418,5 +498,10 @@
       </ul> 
     </div>
     </div>
+
+   <!-- <script src="js/jquery-3.2.1.min.js"> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/hamburger-menu.js"></script>
   </body>
 </html>
