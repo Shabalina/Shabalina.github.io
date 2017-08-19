@@ -95,6 +95,28 @@
             console.log(randomNumber);
             console.log(selectEven(randomNumber));
 
+
+            $(document).ready(function() {
+            $('.member_name').on('click', function(e) {
+            e.preventDefault();
+
+            var $this = $(this);
+            var memberBlock = $this.parent();
+            
+            if (memberBlock.hasClass('.active')){
+                $this.next().slideUp(600);
+                
+            }
+            else{
+                $this.next().slideDown(600);
+            }
+            
+            
+            memberBlock.toggleClass('.active');
+            
+        })
+        })
+
             </script>    
         </body>
         </html>

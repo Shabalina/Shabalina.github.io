@@ -53,10 +53,9 @@
 }
 
 .member_info{
+ //   display: none;
     display: flex;
     flex-direction: row;
-    height: 0;
-    overflow: hidden;  
 }
 
 .member_name{
@@ -64,7 +63,8 @@
     font-family: Gagalin;
     font-size: rem(14px);
     font-weight: 400;
-    line-height: rem(28px);    
+    line-height: rem(28px);   
+    text-decoration: none; 
     margin-bottom: rem(10px);
     margin-top: rem(20px);
     display: block;
