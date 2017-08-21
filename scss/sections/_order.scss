@@ -52,6 +52,10 @@
     flex:1;
 }
 
+.show_error{
+  border: rem(10px) solid red;
+}
+
 .order__form-block-label{
     
     color: #ffffff;
@@ -145,7 +149,7 @@
   .order__radio-elem:checked {
     &+.order__radio-fake {
       &:after {
-        background: url("../../img/icons/check.svg") 50% no-repeat transparent;
+        background: url("../img/content/checked.png") 50% no-repeat transparent;
         background-size: contain;
         width: rem(11px);
         height: rem(9px);

@@ -8,6 +8,7 @@
     <meta content="" name="keywords">
     <meta content="width=device-width, initial-scale=1" name="viewport">
     <meta content="ie=edge" http-equiv="x-ua-compatible">
+    <link rel="stylesheet" href="./css/jquery.qtip.min.css">
     <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href="./css/main.css">
 
@@ -283,90 +284,90 @@
             <div class="section__title">
               Закажите доставку
             </div>
-          <form class="order_form_tag" id="order-form">
+          <form action="mail.php" method="post" class="order_form_tag" id="order-form" >
             <div class="order__form">
               <div action="" class="order__form_col">
                   <div class="form__row">
-                    <label class="order__form-block">
+                    <label class="order__form-block" for="name">
                       <div class="order__form-block-label">
                         Имя
                       </div>
-                      <input class="order__form-input" name="name" type="text" placeholder="">
+                      <input class="order__form-input" id="name" data-error = "Заполните поле Имя!" name="name" type="text" placeholder="">
                     </label>
-                  <label class="order__form-block">
+                  <label class="order__form-block" for="mobile">
                       <div class="order__form-block-label">
                         Телефон
                       </div>
-                      <input class="order__form-input" name="phone" type="text" placeholder="">
+                      <input class="order__form-input" id="mobile" data-error = "Заполните поле Телефон!" name="phone" type="tel" placeholder="">
                     </label>
                   </div>
                   <div class="form__row">
-                    <label class="order__form-block">
+                    <label class="order__form-block" for="street">
                       <div class="order__form-block-label">
                         Улица
                       </div>
-                      <input class="order__form-input" name="street" type="text" placeholder="">
+                      <input class="order__form-input" id="street" data-error = "Заполните поле Улица!" name="street" type="text" placeholder="">
                     </label>
                   </div>
                   <div class="form__row">
-                    <label class="order__form-block">
+                    <label class="order__form-block" for="house">
                       <div class="order__form-block-label">
                         Дом
                       </div>
-                      <input class="order__form-input" name="house" type="text" placeholder="">
+                      <input class="order__form-input" id="house" data-error = "Заполните поле Дом!" name="house" type="text" placeholder="">
                     </label>
-                    <label class="order__form-block">
+                    <label class="order__form-block" for="part">
                       <div class="order__form-block-label">
                         Строение
                       </div>
-                      <input class="order__form-input" name="block" type="text" placeholder="">
+                      <input class="order__form-input" id="part" data-error = "Заполните поле Корпус!" name="block" type="text" placeholder="">
                     </label>
-                    <label class="order__form-block">
+                    <label class="order__form-block" for="apart">
                       <div class="order__form-block-label">
                         Квартира
                       </div>
-                      <input class="order__form-input" name="flat" type="text" placeholder="">
+                      <input class="order__form-input" id="apart" data-error = "Заполните поле Квартира!" name="flat" type="number" placeholder="">
                     </label>
-                    <label class="order__form-block">
+                    <label class="order__form-block" for="floor">
                       <div class="order__form-block-label">
                         Этаж
                       </div>
-                      <input class="order__form-input" name="level" type="text" placeholder="">
+                      <input class="order__form-input" id="floor" data-error = "Заполните поле Этаж!" name="level" type="number" placeholder="">
                     </label>
                   </div>
               </div>
               <div action="" class="order__form_col">
                   <div class="form__row">
-                    <label class="order__form-block">
+                    <label class="order__form-block" for="comment">
                       <div class="order__form-block-label">
                         Коментарии
                       </div>
-                      <textarea class="order__form-input order__form-textarea" name="comment">
+                      <textarea class="order__form-input order__form-textarea" id="comment" data-error = "Заполните поле Комментарии!" name="comment">
                         </textarea>
                     </label>
                   </div>
                    <div class="order__form-buttons">
                      <div class="form__row">
                       <label class="order__radio">
-                        <input class="order__radio-elem" name="payment" type="radio">
+                        <input class="order__radio-elem" id="pay_cash" name="pay_option" value="наличными" type="radio">
                         <div class="order__radio-fake"></div>
                         <div class="order__radio-title">Потребуется сдача</div>
                       </label>
                     <label class="order__radio">
-                      <input class="order__radio-elem" name="payment" type="radio">
+                      <input class="order__radio-elem" id="pay_card" name="pay_option" value="картой" type="radio">
                       <div class="order__radio-fake"></div>
                       <div class="order__radio-title">Оплата по карте</div>
                     </label>
                   </div>
                   <div class="form__row">
                   <label class="order__radio order__radio_checkbox">
-                      <input class="order__radio-elem" name="callback" type="checkbox">
+                      <input class="order__radio-elem" id="dont_disturb" name="dont_disturb" value="1" type="checkbox">
                       <div class="order__radio-fake"></div>
-                      <div class="order__radio-title">Не перезванивать</div>
+                      <div class="order__radio-title" >Не перезванивать</div>
                     </label>
                   </div>
                   <div class="form__row">
-                  <input class="order__form-button" name="" type="submit" value="Заказать">
+                  <button class="order__form-button" name="" type="submit" value="Заказать">Заказать</button>
                   <input class="order__form-button order__form-button_reset" name="" type="reset" value="Очистить">
                 </div>  
                </div>
@@ -460,8 +461,11 @@
           </ul>
         </section>
       
-      <section class="section contacts">
-        <footer class="footer">
+      <section id="map" class="section contacts">  
+        <div  class="contact_map">
+          </div>   
+      </section> 
+      <footer class="footer">
           <div class="footer__container">
           <div class="adress_area">
             <p class="contacts_text">
@@ -493,7 +497,6 @@
           </ul>   
           </div>        
         </footer>
-      </section> 
       <div class="hamburger-menu">
                   <div class="hamburger-menu__logo">
                     <a class="logo" href="#">
@@ -552,10 +555,17 @@
 
    <!-- <script src="js/jquery-3.2.1.min.js"> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script async defer
+      src ="https://maps.googleapis.com/maps/api/js?key=AIzaSyBi9spRncwojtoHPHlzV73IMctByoL4Ycw&callback=initMap">
+    </script> 
     <script src="js/main.js"></script>
+    <script src="js/jquery.qtip.min.js"></script>
     <script src="js/hamburger-menu.js"></script>
     <script src="js/slider.js"></script>
     <script src="js/accordion_team.js"></script>
     <script src="js/accordion_menu.js"></script>
+    <script src="js/form_submit.js"></script>
+    <script src="js/google_maps.js"></script> 
+    <script src="js/ajax_submit.js"></script> 
   </body>
 </html>
