@@ -13,3 +13,12 @@ $(document).ready(function() {
 
   });
 })
+
+$(document).ready(function() {
+  
+  $('.ingredients_icon').on('click', function() {
+    
+    $('.ingredients_menu').slideToggle(300);
+  });
+
+});
