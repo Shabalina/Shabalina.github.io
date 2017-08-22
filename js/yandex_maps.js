@@ -6,7 +6,7 @@
 		
 		var myPlacemark = new ymaps.Placemark([burger[1], burger[2]], {}, {
         iconLayout: 'default#image',
-        iconImageHref: 'map-marker.png',
+        iconImageHref: './img/content/map-marker.svg',
         iconImageSize: [46, 57],
         iconImageOffset: [-3, -42]
 		});
@@ -33,6 +33,7 @@ ymaps.ready(init);
 		['Kudrovo', 59.917, 30.491, 3],
 		['Moskovskie_vorota', 59.893, 30.314, 4],
 		];
+		
 		
 	setMarkers(myMap, burgerMarkers);
     }
