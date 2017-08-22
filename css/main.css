@@ -1371,6 +1371,17 @@ footer {
   text-transform: none;
   background: transparent; }
 
+.contacts {
+  background-image: url("../img/bg/map.png");
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: cover;
+  position: relative; }
+
+.map_container {
+  width: 100%;
+  height: 100%; }
+
 .footer {
   background-image: url("../img/bg/footer.png");
   background-repeat: no-repeat;

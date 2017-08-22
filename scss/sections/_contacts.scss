@@ -1,11 +1,17 @@
 
 
 .contacts {
-//  background-image: url('../img/bg/map.png');
-//  background-repeat: no-repeat;
-//  background-position: center bottom;
-//  background-size: cover;
-//  position: relative
+  background-image: url('../img/bg/map.png');
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: cover;
+  position: relative
+}
+
+.map_container{
+  width: 100%;
+  height: 100%;
+  //style="width: 600px; height: 400px"
 }
 
 .footer {
