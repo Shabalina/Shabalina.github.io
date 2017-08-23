@@ -131,6 +131,7 @@ justify-content: flex-end;
 .arrow-scroll-right{
   position: absolute;
   right: 0;
+  cursor: pointer;
   margin-right: rem(40px);
 }
 .arrow-scroll-left{
@@ -163,6 +164,7 @@ justify-content: flex-end;
     top: rem(50px);
     right: rem(10px);
     left: auto;
+    bottom: auto;
   }
 }
 

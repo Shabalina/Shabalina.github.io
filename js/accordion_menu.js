@@ -13,17 +13,17 @@ $(document).ready(function() {
 	
 	if (activeItem >= 0){
 		console.log ('activeItem: ', activeItem)
-		items.eq(activeItem).hide(600);
+		items.eq(activeItem).hide(300);
 		blocks.eq(activeItem).toggleClass('menu_active'); //закрыли и выключили
 		if (clicked != activeItem){
-			items.eq(clicked).show(600);
+			items.eq(clicked).show(300);
 			blocks.eq(clicked).toggleClass('menu_active'); //открыли и включили
 			
 		}
 	}
 	
 	else{
-		items.eq(clicked).show(600);
+		items.eq(clicked).show(300);
 		blocks.eq(clicked).toggleClass('menu_active'); //открыли и включили впервые
 			
 	}
