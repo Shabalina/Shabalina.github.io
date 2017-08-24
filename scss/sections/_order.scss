@@ -11,11 +11,6 @@
 .order__form{
     display: flex;
     margin-left: -5%;
- //   flex-direction: row;
-//    justify-content: space-between;
- //   align-items: center;
- //   max-width: rem(940px);
-//    width: 100%;
         @include tablets() {
         flex-direction: column;
         align-items: center;
@@ -27,10 +22,6 @@
 .order__form_col{
     width: 45%;
     margin-left: 5%;
-//    display: flex;
-//    flex-direction: column;
-//    flex-basis: 50%;
-//    align-self: flex-start;
         @include tablets {
         width: 100%;
         margin-left: 0;
@@ -52,9 +43,7 @@
     flex:1;
 }
 
-.show_error{
-  border: rem(10px) solid red;
-}
+
 
 .order__form-block-label{
     
@@ -75,6 +64,9 @@
   border-radius: rem(7px);
   border: rem(1px) solid #d1cfcb;
     width:100%;
+ /*   &.show_error{
+      background: red; 
+}*/
 }
 
 .order__form-textarea{
@@ -178,6 +170,18 @@
   padding-right: 0;
   text-transform: none;
   background: transparent;
+}
+
+.success_mail{
+  border: 2px double green;
+  color: green;
+
+}
+
+.error_mail{
+  border: 2px double red;
+  color: red;
+  
 }
 
 

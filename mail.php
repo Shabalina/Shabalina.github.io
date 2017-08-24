@@ -47,7 +47,6 @@ if ($mail) {
     $data['mes'] = "На сервере произошла ошибка";
 }
 echo json_encode($data);
-echo ('here');
     
 
 ?>

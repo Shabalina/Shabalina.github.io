@@ -18,7 +18,9 @@ var validator = function(){
 				}*/
 			}
 
+		
 		return flag;
+		
 
 	}
 
@@ -49,17 +51,64 @@ var validator = function(){
 	
 	return {
 		init: function(form){
-			checkData(form);
+			
+			return checkData(form);
 		}
 	}
 }
 
+	var ajaxForm = function (form) {
+
+    var url = form.attr('action'),
+        data = form.serialize();
+
+    return $.ajax({
+        type: 'POST',
+        url: url,
+        data: data,
+        dataType: 'JSON'
+    });
+
+}
+
+////
+
+
+
+//$('#order-form').on('submit', submitForm);
+
+/////
+
 
 
 $(document).ready(function() {
-	$('form').on('submit', function(e) {
+	$('#order-form').on('submit', function(e) {
 	e.preventDefault(); 
-    validator().init(this);
+	console.log(validator().init(this))
+    if(validator().init(this)){
+		
+		var form = $(this);
+        
+		var request = ajaxForm(form);
+
+		request.done(function(msg) {
+			var mes = msg.mes,
+				status = msg.status;
+				
+			if (status === 'OK') {				
+				alert(mes);
+				form.append('<p class="success_mail">' + mes + '</p>');
+			} else{
+				alert(mes);
+				form.append('<p class="error_mail">' + mes + '</p>');
+			}
+		});
+
+		request.fail(function(jqXHR, textStatus) {
+			alert("Request failed: " + textStatus);
+		});
+		
+	};
 
   });
   

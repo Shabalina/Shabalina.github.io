@@ -1304,9 +1304,6 @@ footer {
   -ms-flex: 1;
   flex: 1; }
 
-.show_error {
-  border: 0.625rem solid red; }
-
 .order__form-block-label {
   color: #ffffff;
   font-family: Ubuntu;
@@ -1322,7 +1319,10 @@ footer {
   background: #fff;
   border-radius: 0.4375rem;
   border: 0.0625rem solid #d1cfcb;
-  width: 100%; }
+  width: 100%;
+  /*   &.show_error{
+      background: red; 
+}*/ }
 
 .order__form-textarea {
   height: 6.875rem;
@@ -1409,6 +1409,14 @@ footer {
   padding-right: 0;
   text-transform: none;
   background: transparent; }
+
+.success_mail {
+  border: 2px double green;
+  color: green; }
+
+.error_mail {
+  border: 2px double red;
+  color: red; }
 
 .contacts {
   background-image: url("../img/bg/map.png");
