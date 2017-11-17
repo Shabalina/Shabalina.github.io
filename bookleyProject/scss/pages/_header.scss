@@ -1,0 +1,106 @@
+
+.navigation-clean-button{
+  background:#fff;
+  padding-top:rem(3px);
+  padding-bottom:rem(3px);
+  color:#333;
+  border-radius:0;
+  box-shadow:none;
+  border:none;
+  border-bottom: rem(1px) solid gray;
+  margin-bottom:0;
+      position: relative;
+    min-height: 50px;
+}
+
+.header-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 95%;
+    padding-right: rem(15px);
+    padding-left: rem(15px);
+    margin-right: auto;
+    margin-left: auto;
+}
+
+
+.navigation-clean-button .navbar-brand{
+  font-weight:bold;
+  color: #342626;
+ // font-family: Roboto;
+  font-size: rem(30px);
+  font-weight: 700;
+  line-height: rem(25px);
+  text-transform: uppercase;
+  padding: 15px 0px;
+}
+
+.navbar-nav>li>a {
+  color: #342626;
+ // font-family: Roboto;
+  font-size: rem(20px);
+  font-weight: 400;
+  line-height: rem(25px);
+  text-transform: uppercase;
+    line-height: 20px;
+}
+
+.navigation-clean-button .navbar-brand:hover{
+  color:#222;
+}
+
+.navigation-clean-button.navbar-default .navbar-nav > li > a:focus, .navigation-clean-button.navbar-default .navbar-nav > li > a:hover{
+  color:  #7c8085 !important;
+  background-color:transparent;
+  
+}
+
+.navbar-logout {
+    margin-top: 7px;
+    margin-bottom: 0;
+ //   float: right!important;
+    margin-right: -15px;
+    margin-left: 15px;
+
+}
+
+.action-button {
+  background:#d1e245;
+  border-radius:rem(6px);
+  color:#fff;
+  font-size: rem(20px);
+  font-weight: 400;
+  line-height: rem(25px);
+  text-transform: uppercase;
+  box-shadow:none;
+  border:none;
+  text-shadow:none;
+  padding:10px 22px;
+  transition:background-color 0.25s;
+  &:hover{
+     background:#D1E295; 
+  }
+}
+
+
+@media (max-width:767px) {
+  .navigation-clean-button{
+    padding-top:0;
+    padding-bottom:0;
+  }
+}
+
+@media (max-width:767px) {
+  .navigation-clean-button .navbar-header{
+    padding-top:10px;
+    padding-bottom:10px;
+  }
+}
+
+@media (max-width:767px) {
+  .navigation-clean-button .navbar-right{
+    margin-bottom:20px;
+  }
+}
+

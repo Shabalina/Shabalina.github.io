@@ -1,0 +1,127 @@
+/* The main content 
+
+.main-content {
+	font-family: Arial, Helvetica, sans-serif;
+	max-width: 600px;
+	padding-top: 40px;
+	margin: 0 0 40px 210px;
+}
+*/
+
+/* The left sidebar */
+
+.sidebar-left {
+    position: absolute;
+    top: 0;
+	left: 0;
+//	background-color: #292c2f;
+	width: rem(280px);
+	height: 100%;
+	padding: rem(45px) rem(50px);
+}
+
+.sidebar-left .sidebar-links {
+	margin: rem(20px) auto;
+}
+
+.sidebar-left .sidebar-links a {
+	display: block;
+	text-decoration: none;
+	margin: 0 auto rem(20px) auto;
+	padding: rem(6px);
+	background-color: #f9f9f9;
+    text-align: left;
+    color: #493f3f;
+ //   font-family: Roboto;
+	font-size: rem(20px);
+	font-weight: 400;
+}
+
+
+.sidebar-left .sidebar-links a.selected{
+	background-color: #d1e245;;
+	color: #342626;;
+	font-size: rem(20px);
+	font-weight: bold;
+	cursor: default;
+}
+
+
+
+/* Making the sidebar responsive */
+
+@media (max-width: 900px) {
+
+	.main-content{
+		max-width: none;
+		padding: rem(40px) rem(20px);
+		margin: 0 0 rem(40px);
+	}
+
+	.sidebar-left {
+		width: auto;
+		height: auto;
+		position: inherit;
+		padding: rem(20px) 0 0;
+	}
+
+	.sidebar-left .sidebar-links {
+		text-align: center;
+		margin: rem(20px) auto 0;
+	}
+
+	.sidebar-left .sidebar-links a {
+		display: inline-block;
+		width: rem(100px);
+		margin: 0;
+		padding: rem(14px) 0;
+		border-left: none;
+		border-top-width: rem(2px);
+		border-top-style: solid;
+	}
+
+}
+
+/* Mobile phone layout */
+
+@media (max-width: 450px) {
+
+	.sidebar-left {
+		padding: 20px 0;
+	}
+
+	.sidebar-left .sidebar-links {
+		text-align: center;
+		margin: 20px auto 0;
+	}
+
+	.sidebar-left .sidebar-links a {
+		display: block;
+		max-width: 240px;
+		width: auto;
+		vertical-align: middle;
+		text-align: left;
+		margin: 0 auto 5px;
+		padding: 10px 25px;
+		border-top: none;
+		border-left-width: 2px;
+		border-left-style: solid;
+	}
+
+	.sidebar-left .sidebar-links a i.fa {
+		display: inline-block;
+		font-size: 20px;
+		width: 20px;
+		margin: 0 20px 0 0;
+		vertical-align: middle;
+	}
+
+}
+
+/*	Removing margins and paddings from the body, so that
+    the sidebar takes the full height of the page */
+
+body {
+	margin: 0;
+	padding: 0;
+} 

@@ -1,0 +1,142 @@
+html{
+@include tablets{
+  font-size: rem(15px);
+}
+@include phones{
+  font-size: rem(13px);
+}
+}
+
+
+.wrapper {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.maincontent {
+//  position: relative;
+  height: 100%;
+  min-height: rem(650px);
+  transition: transform 1s;
+  will-change: transform;
+}
+
+
+.container {
+  max-width: rem(940px);
+  margin: 0 auto;
+  width: 95%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+
+
+.section {
+ // height: 100%;
+  background-color: rgba(0,0,0,0.31);
+//  min-width: rem(940px);
+  min-height: rem(650px);
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.order-link {
+  min-width: rem(98px);
+  padding: rem(10px) rem(17px);
+  border-radius: rem(5px);
+  background-color: $orange;
+  color: #fff;
+  text-decoration: none;
+  font-size: rem(13px);
+  font-weight: 500;
+  line-height: 1.42;
+  text-transform: uppercase;
+  transition: .5s;
+  &:hover {
+    background-color: darken($orange, 7%);
+  }
+}
+
+footer {
+  position: relative;
+  width: 100%;
+}
+
+.points {
+  list-style-type: none;
+  position: fixed;
+  right: rem(54px);
+  top: rem(95px);
+  @include tablets() {
+    display: none;
+  }
+}
+
+.point__item {
+  
+  margin-bottom:  rem(12px);
+}
+
+.point__slide__link {
+  width: rem(16px);
+	height: rem(16px);
+  display: block;
+  position: relative;
+ 
+  &:after, &:before {
+		content: "";
+		display: block;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		border-radius: 50%;
+	}
+
+	&:after {
+		width: rem(6px);
+		height: rem(6px);
+		background: #fff;
+	}
+
+	&:before {
+		width: rem(0px);
+		height: rem(0px);
+		border-radius: 50%;
+		border: rem(1px) solid #fff;
+		opacity: 0;
+		transition: .3s;
+	}
+
+	&:hover {
+		&:before {
+			width: rem(14px);
+			height: rem(14px);
+			opacity: 1;
+		}
+	}
+}
+
+.point__item {
+	&.active_dot {
+		.point__slide__link {
+			&:before {
+				width: rem(14px);
+				height: rem(14px);
+				opacity: 1;
+			}
+		}
+	}
+}
+
+
+
+  
+
