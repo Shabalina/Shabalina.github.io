@@ -73,8 +73,8 @@ $(document).ready(function() {
 
 //onepage
 $(document).ready(function() {
-  var sections = $('.section'),
-    display = $('.maincontent'),
+  var sections = $('.section');
+  var  display = $('.maincontent');
     inScroll = false;
 
  /* var md = new MobileDetect(window.navigator.userAgent),
