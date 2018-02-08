@@ -77,7 +77,7 @@ $(document).ready(function() {
   var  display = $('.maincontent');
     inScroll = false;
 
- var md = new MobileDetect(window.navigator.userAgent),
+ var md = new MobileDetect(window.navigator.userAgent);
     isMobile = md.mobile();
 
   var performTransition = function (sectionEq) {
