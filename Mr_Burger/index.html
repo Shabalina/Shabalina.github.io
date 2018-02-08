@@ -602,6 +602,16 @@
     <script src="js/form_submit.js"></script>
     <script src="js/yandex_maps.js"></script> 
     <script src="js/site_navigation.js"></script> 
-    
+    <script>
+      var md = new MobileDetect(window.navigator.userAgent);
+      isMobile = md.mobile();
+      if (isMobile) {
+        $(window).swipe({
+          swipe: function (event, direction, distance, duration, fingerCount, fingerData) {
+            scrollToSection(direction);
+          }
+        });
+      }
+    </script> 
   </body>
 </html>
