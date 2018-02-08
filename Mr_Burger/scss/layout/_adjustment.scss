@@ -72,8 +72,8 @@ footer {
 .points {
   list-style-type: none;
   position: fixed;
-  right: rem(54px);
-  top: rem(95px);
+  right: 3%;
+  top: 25%;
   @include tablets() {
     display: none;
   }
