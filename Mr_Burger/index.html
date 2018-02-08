@@ -603,9 +603,11 @@
     <script src="js/yandex_maps.js"></script> 
     <script src="js/site_navigation.js"></script> 
     <script>
-      var md = new MobileDetect(window.navigator.userAgent);
-      isMobile = md.mobile();
-      if (isMobile) {
+      function isMobileDevice() {
+        return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
+        };
+      
+      if (isMobileDevice) {
         $(window).swipe({
           swipe: function (event, direction, distance, duration, fingerCount, fingerData) {
             scrollToSection(direction);
