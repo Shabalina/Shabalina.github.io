@@ -606,7 +606,7 @@
       function isMobileDevice() {
         return (typeof window.orientation !== "undefined") || (navigator.userAgent.indexOf('IEMobile') !== -1);
         };
-      console.log(isMobileDevice());
+      alert(isMobileDevice());
       if (isMobileDevice()) {
         $(window).swipe({
           swipe: function (event, direction, distance, duration, fingerCount, fingerData) {
