@@ -1,5 +1,6 @@
 Simple web app to filter friends in VKontakte social network https://vk.com
-To use it you need to have an account there: https://vk.com.
+If user has account in this network after authentification he will see his actual 'friends',
+in case authentification declining the app will display the list of random 'friends' loaded from local file. 
 
 When app is opened, it generate a list of tiles, every tile displays name and small profile picture of all user's friends.
 User can move friend's tiles between two areas by clicking or dragging. 
